@@ -1,0 +1,11 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
+
+<body>
+    {% for elem in items %}
+    <a href={% url "myapp:item_id" elem.id %}>
+        <h3>{{ elem.name }}</h3>
+    </a>
+    {% endfor %}
+</body>
